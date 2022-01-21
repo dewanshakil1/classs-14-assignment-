@@ -1,0 +1,61 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+.fivarCoun{
+    width: 300px;
+    margin: auto;
+    background-color: #18cb18ab;
+    padding: 10px;
+    box-shadow: 0px 1px 20px 6px #858885eb !important;
+    margin-top: 7px;
+}
+.BTN{
+    background: #64dc64;
+}
+.BTN:hover{
+    background: #8fdd8f;
+}
+/* 
+output css
+*/
+h2.display-3 {
+    background: rebeccapurple;
+    text-align: center;
+    border-radius: 13%;
+    color: white;
+    box-shadow: 0px 1px 20px 6px #858885eb !important; ;
+    
+}
+p {
+ 
+    text-align: center;
+    font-family: cursive;
+    background: rebeccapurple;
+    border-radius: 10px;
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+h3{
+    text-align: center;
+    font-size: 16px;
+}
+.date-output {
+    background: #663399d6;
+    color: white;
+    font-family: initial;
+    border-radius: 29px;
+    padding-top: 7px;
+    padding-left: 13px;
+    padding-bottom: 10px;
+    padding-left: 13px;
+    margin-top: 7px;
+}
+.Bordr{
+    border-left: 1px solid greenyellow;
+}
+.uppercase{
+    text-transform: uppercase;
+    font-size: larger;
+}
