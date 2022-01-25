@@ -3,7 +3,6 @@ const day = document.querySelector(".day");
 const hour = document.querySelector(".hour");
 const mins = document.querySelector(".min");
 const Sec = document.querySelector(".sec");
-
 button.addEventListener("click", function () {
   
   setInterval(() => {
@@ -104,12 +103,7 @@ formIn.addEventListener("submit", function (e) {
  */
 allproduct();
 function allproduct(){
-  let allM;
-  if(get_data('devs')){
-    allM=get_data('devs');
-  }else{
-    allM = [];
-  }
+ 
    let all_data = get_data("products");
   let data = "";
   all_data.map(ddata=>{
@@ -139,90 +133,6 @@ function get_data(key){
   let data = localStorage.getItem(key);
   return JSON.parse(data);
 }
-
-/*****
- * devs member app
- */
-const Alldevs = document.getElementById("devs");
-const ariya = document.querySelector(".devs-area");
-
-Alldevs.addEventListener("submit", function(e){
-  e.preventDefault();
-  let name = this.querySelector('input[name="name"]');
-  let skill = this.querySelectorAll('input[name="skill"]:checked');
-  let gender = this.querySelector('input[name="gender"]:checked');
-  let photo = this.querySelector('input[name="photo"]');
-  let skill_array=[];
-
-  for(let i = 0; i < skill.length; i++){
-    skill_array.push(skill[i].value);
-   
-  } 
-  console.log(skill_array);
-  
-
-  let data_array;
-  if (get_data("devs")) {
-    data_array = get_data("devs");
-  } else {
-    data_array ;
-  }
-  data_array.push({
-    name: name.value,
-    skills: skill_array,
-    gender: gender.value,
-    photo: photo.value
-  });
-  console.log(data_array);
-  
-  send_data("devs",data_array); 
-  alldevs();
-
-});
-
-alldevs();
-function alldevs(){
-  let all_devs = get_data("devs");
-  let data ="";
-  all_devs.map( d => {
-
-    let lists = '';
-
-    d.skills.map(list => {
-        lists += `<li class="list-group-item"> ${list} </li>`;
-    });
-
-
-      data += `
-
-              <div class="col-md-4 my-3">
-          <div class="card">
-            <img style="width:100%; height:250px; object-fit: cover; " class="card-img" src="${ d.photo }" alt="">
-            <div class="card-body">
-              <h2>${ d.name }</h2>
-              <p>Gender : ${ d.gender }</p>
-              <hr>
-              skills 
-              <hr>
-              <ul class="list-group">
-                                  
-                                  ${ lists }
-
-                
-              </ul>
-              
-            </div>
-          </div>
-        </div>
-      
-      `;
-
-  });
-
-  ariya.innerHTML = data;
-
-}
-
 
 
  
