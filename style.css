@@ -51,6 +51,7 @@ h3{
     padding-bottom: 10px;
     padding-left: 13px;
     margin-top: 7px;
+    
 }
 .Bordr{
     border-left: 1px solid greenyellow;
@@ -59,3 +60,9 @@ h3{
     text-transform: uppercase;
     font-size: larger;
 }
+/* 
+add project
+*/
+.add_pro{
+    display: none;
+}  
